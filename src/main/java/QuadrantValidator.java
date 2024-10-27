@@ -1,5 +1,3 @@
-package QuadrantValidatorKata;
-
 public class QuadrantValidator {
     private static final int FIRST = 1;
 
