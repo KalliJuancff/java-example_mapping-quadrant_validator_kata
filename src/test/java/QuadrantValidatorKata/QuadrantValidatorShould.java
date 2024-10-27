@@ -1,6 +1,8 @@
 package QuadrantValidatorKata;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -16,20 +18,10 @@ public class QuadrantValidatorShould {
         assertThat(new QuadrantValidator().isValid(FIRST)).isTrue();
     }
 
-
-    @Test
-    public void take_as_invalid_second_quadrant() {
-        assertThat(new QuadrantValidator().isValid(SECOND)).isFalse();
-    }
-
-    @Test
-    public void take_as_invalid_third_quadrant() {
-        assertThat(new QuadrantValidator().isValid(THIRD)).isFalse();
-    }
-
-    @Test
-    public void take_as_invalid_fourth_quadrant() {
-        assertThat(new QuadrantValidator().isValid(FOURTH)).isFalse();
+    @ParameterizedTest
+    @ValueSource(ints = {SECOND, THIRD, FOURTH})
+    public void take_as_invalid_rest_of_quadrants(int quadrant) {
+        assertThat(new QuadrantValidator().isValid(quadrant)).isFalse();
     }
 }
 
