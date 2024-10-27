@@ -1,13 +1,14 @@
 package QuadrantValidatorKata;
 
 public class QuadrantValidator {
-    private static final int FIRST = 1;
+    private static final int SECOND = 2;
+    private static final int THIRD = 3;
 
     public boolean isValid(int quadrant) {
-        if (quadrant == FIRST) {
-            return true;
+        if (quadrant == SECOND || quadrant == THIRD) {
+            return false;
         }
 
-        return false;
+        return true;
     }
 }
