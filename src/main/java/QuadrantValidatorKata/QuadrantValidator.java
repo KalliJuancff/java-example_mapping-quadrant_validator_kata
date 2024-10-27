@@ -1,10 +1,13 @@
 package QuadrantValidatorKata;
 
 public class QuadrantValidator {
-    public QuadrantValidator() {
-    }
+    private static final int FIRST = 1;
 
     public boolean isValid(int quadrant) {
-        return true;
+        if (quadrant == FIRST) {
+            return true;
+        }
+
+        return false;
     }
 }
