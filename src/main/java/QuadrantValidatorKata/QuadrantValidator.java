@@ -1,10 +1,10 @@
 package QuadrantValidatorKata;
 
 public class QuadrantValidator {
-    public QuadrantValidator(int quadrant) {
+    public QuadrantValidator() {
     }
 
-    public boolean isValid() {
+    public boolean isValid(int quadrant) {
         return true;
     }
 }

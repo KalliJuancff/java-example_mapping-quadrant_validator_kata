@@ -9,7 +9,7 @@ public class QuadrantValidatorShould {
 
     @Test
     public void take_as_valid_first_quadrant() {
-        assertThat(new QuadrantValidator(FIRST).isValid()).isTrue();
+        assertThat(new QuadrantValidator().isValid(FIRST)).isTrue();
     }
 }
 
